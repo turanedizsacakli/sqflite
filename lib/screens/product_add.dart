@@ -58,7 +58,6 @@ class ProductAddState extends State {
      );
   }
 
-  
   buildSaveButton() {
     return ElevatedButton(
         onPressed: (){
@@ -69,7 +68,8 @@ class ProductAddState extends State {
   }
 
   void addProduct() async {
-    var result=await dbHelper.insert(Product(txtName.text,txtDescription.text,double.tryParse(txtUnitPrice.text)));
+    var result=await dbHelper.insert(Product(name:txtName.text,description:txtDescription.text,unitPrice:int.parse(txtUnitPrice.text) ));
+    print(result);
     Navigator.pop(context,true);
   }
 }
