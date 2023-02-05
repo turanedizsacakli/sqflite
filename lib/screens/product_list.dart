@@ -13,7 +13,6 @@ class ProductList extends StatefulWidget{
 
 class _ProductListState extends State {
   var dbHelper= DbHelper();
-  //whyyyyyyyyyy?
   late List<Product> products;
   int productCount=0;
 
@@ -83,4 +82,6 @@ class _ProductListState extends State {
       }
     }
   }
+
+
 }
